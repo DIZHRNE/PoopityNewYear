@@ -1,10 +1,10 @@
-from flask import Flask
-import new
-
+from flask import Flask, render_template             
 app = Flask(__name__)
-
 @app.route("/")
 def home():
-    return new
+    return render_template("home.html")
+@app.route("/salvador")
+def salvador():
+    return "Hello, Salvador"
 if __name__ == "__main__":
     app.run(debug=True)
